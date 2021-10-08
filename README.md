@@ -17,7 +17,7 @@ Creation of a Rest API using NodeJS, Express, Docker, Postgresql for manipulatio
  | :------- | 
  | `string` |  
 
-#### Get item
+#### Get contact
 
 ```http
   GET /contacts/${id}
