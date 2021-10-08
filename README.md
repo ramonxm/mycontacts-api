@@ -28,6 +28,18 @@ Creation of a Rest API using NodeJS, Express, Docker, Postgresql for manipulatio
 | `id`      | `string` | **Error**. User not found|
 
 
+## How to use
+
+```shell
+$ npm install 
+// or yarn
+```
+
+```shell
+$ npm run dev
+// or yarn dev
+```
+
   
 ## Authors
 
