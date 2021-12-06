@@ -12,7 +12,7 @@ class ContactController {
     const contact = await ContactsRepository.findById(id);
 
     if (!contact) {
-      return response.status(404).json({ error: 'User not found' });
+      return response.status(404).json({ error: 'Contact not found' });
     }
 
     response.json(contact);
@@ -36,7 +36,7 @@ class ContactController {
       name, email, phone, category_id,
     });
 
-    response.json(contact);
+    response.status(201).json(contact);
   }
 
   async update(request, response) {
@@ -51,7 +51,7 @@ class ContactController {
 
     const contactExists = await ContactsRepository.findById(id);
 
-    if (!contactExists) return response.status(404).json({ error: 'User not found' });
+    if (!contactExists) return response.status(404).json({ error: 'Contact not found' });
 
     if (!name) return response.status(400).json({ error: 'Name is required' });
 
@@ -78,5 +78,4 @@ class ContactController {
   }
 }
 
-// Singleton
 module.exports = new ContactController();
