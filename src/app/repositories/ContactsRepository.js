@@ -17,7 +17,7 @@ class ContactsRepository {
     SELECT contacts.*, categories.name AS category_name
     FROM contacts
     LEFT JOIN categories ON categories.id = contacts.category_id
-    WHERE contacs.id = $1
+    WHERE contacts.id = $1
     `, [id]);
 
     return row;
